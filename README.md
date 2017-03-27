@@ -1,6 +1,6 @@
 # Sweet As Beers
 
-In this challenge you'll build part of a fictious clearing house for beer - specifically the product listing and shopping cart pages.
+In this challenge you'll build part of a fictitious clearing house for beer - specifically the product listing and shopping cart pages.
 
 
 ## Setup
@@ -24,7 +24,7 @@ The files that create the initial experience are `public/index.html` and `public
 * `<BeerList />`
 * `<BeerListItem />`
 
-You might consider imporing `data/beers.js` into the `Listing` component and passing the array into the `BeerList` component.
+You might consider importing `data/beers.js` into the `Listing` component and passing the array into the `BeerList` component.
 
 At this point, don't worry about making the link to the cart work or even using Redux. Just get the initial view working with components instead of static HTML.
 
@@ -45,7 +45,7 @@ Again, don't implement a Redux store, or any button actions at this point.
 Now let's add the ability to navigate between the listing and the cart. Rather than using a client-side router, let's add a Redux store with an `activePage` property. The action creator for navigating between pages could look like this:
 
 ```js
-export const navigate (target) {
+export const navigate = target => {
   return {
     type: 'NAVIGATE',
     target // 'listing' or 'cart'
@@ -61,7 +61,7 @@ Of course you'll need to create the associated `navigation` reducer as well. You
 Create an action creator for an `ADD_TO_CART` action that looks similar to this:
 
 ```js
-export const addToCart (id, name) {
+export const addToCart = (id, name) => {
   return {
     type: 'ADD_TO_CART',
     id,
@@ -94,7 +94,7 @@ When the reducer is processing the `ADD_TO_CART` action, it should default to `1
 Create an action creator for a `REMOVE_FROM_CART` action that looks similar to this:
 
 ```js
-export const removeFromCart (id) {
+export const removeFromCart = id => {
   return {
     type: 'REMOVE_FROM_CART',
     id
@@ -110,7 +110,7 @@ Since this operates on the cart, our existing reducer will suffice - it just nee
 Create an action creator for an `UPDATE_QUANTITIES` action that looks similar to this:
 
 ```js
-export const updateQuantities (cart) {
+export const updateQuantities = cart => {
   return {
     type: 'UPDATE_QUANTITIES',
     cart
