@@ -1,8 +1,16 @@
 import React from 'react'
 
-// This might need to be turned into a stateful component (aka container)
-const App = () => (
+import Home from './Home'
+import AboutUs from './AboutUs'
+import ContactUs from './ContactUs'
+import OurPeople from './OurPeople'
+
+let App = () => (
   <div className='app'>
+    <Home />
+    <AboutUs />
+    <ContactUs />
+    <OurPeople />
   </div>
 )
 
