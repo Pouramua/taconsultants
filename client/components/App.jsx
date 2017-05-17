@@ -12,8 +12,8 @@ let App = () => (
     <Navbar />
     <Home />
     <AboutUs />
-    <ContactUs />
     <OurPeople />
+    <ContactUs />
     <Router>
       <div>
         <Route exact path='/' component={Home} />
