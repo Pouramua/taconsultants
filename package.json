@@ -4,7 +4,7 @@
   "description": "React Redux using express",
   "main": "server/index.js",
   "scripts": {
-    "start": "nodemon --watch server server/index & webpack",
+    "start": "nodemon --watch server server/index & webpack --watch",
     "watch": "nodemon -e js,jsx -x npm test"
   },
   "keywords": [
@@ -34,6 +34,7 @@
   },
   "dependencies": {
     "body-parser": "^1.17.1",
-    "express": "^4.15.2"
+    "express": "^4.15.2",
+    "react-router-dom": "^4.1.1"
   }
 }
