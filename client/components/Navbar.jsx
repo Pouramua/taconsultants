@@ -4,7 +4,6 @@ import { HashLink as Link } from 'react-router-hash-link'
 
 let Navbar = () => (
   <div>
-    <h1>LOGO</h1>
     <Router>
       <ul>
         <li><Link to='/'>Home</Link></li>
